@@ -108,7 +108,7 @@ setStatus('pending');
         })
         setStatus('resolved');}
         )
-        .catch(error => this.setState({ error, status: 'rejected' }));
+        .catch(error =>{ setError(error); setStatus('rejected')});
     }, [input, page])
 
  const formSubmit = input => {
